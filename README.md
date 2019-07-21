@@ -1,4 +1,4 @@
-# GeoJSON Properties Editor Assistant
+# GeoJSON Properties Editor
 This is a tool to assist in editing the properties of a GeoJSON formatted file. At the moment it supports only *collection of Features* GeoJSON object as defined in [RCF7946](https://tools.ietf.org/html/rfc7946#section-2). The tool will convert the **properties** of the each feature in the collection to CSV format and output them to a file. After editing the properties with your CSV editor, the tool will create the GeoJSON file with the edited properties.
 
 
@@ -17,7 +17,7 @@ This will generate 2 files, **gjpe_properties.csv** and **gjpe_features.json**.
 > Note that you can change the prefix of the output files (the **gjpe** part, using `--prefix PREFIX`).
 
 ### Editing the CSV
-Open and edit the **properties.csv** file. Rows can be removed which will cause the corresponding feature not to be included the the final GeoJSON file. New properties can be added by adding new columns. It is important not to edit the
+Open and edit the **gjpe_properties.csv** file. Rows can be removed which will cause the corresponding feature not to be included the the final GeoJSON file. New properties can be added by adding new columns. **Do not to edit** the `split_id` column's values, as this is the reference to the corresponding feature.
 
 ### Join
 To join the **gjpe_properties.csv** and **gjpe_features.json** files run:
